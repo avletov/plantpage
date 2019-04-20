@@ -1,0 +1,59 @@
+//Меню описания растения
+.menu__link_describe {
+    padding: 5px;
+}
+
+.menu__item_describe {
+    width: 33.33%;
+    font-size: 16px;
+}
+
+.menu__link_photo {
+    cursor: pointer;
+    background-color: rgb(25, 25, 25);
+}
+
+.menu__link_card {
+    cursor: pointer;
+    background-color: rgb(50, 50, 50);
+}
+
+.menu__link_substances {
+    cursor: pointer;
+    background-color: rgb(100, 100, 100);
+}
+
+
+//Описание растения
+.container__photo-wrapper {
+    width: 350px;
+    height: 336px;
+}
+
+.container__card {
+    box-sizing: border-box;
+    width: 350px;
+    min-height: 336px;
+    padding: 20px;
+    background-color: salmon;
+    display: none;
+}
+
+.container__substances {
+    box-sizing: border-box;
+    width: 350px;
+    height: 336px;
+    padding: 20px;
+    background-color: greenyellow;
+    display: none;
+}
+
+.photo {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.container__content {
+    margin: 0px;
+    font-size: 16px;
+}

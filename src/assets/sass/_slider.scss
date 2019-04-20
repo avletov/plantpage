@@ -1,0 +1,98 @@
+.slider {
+    position: fixed;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 800px;
+    height: 500px;
+    background-color: rgb(25, 25, 25);
+    display: none;
+}
+
+
+//Оформление слайдов
+.slide {
+    display: flex;
+    justify-content: center;
+}
+
+.slide-photo {
+    height: 100%;
+}
+
+
+//Навигация слайдера
+.slider__navigation {
+    position: absolute;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+
+//Левая навигационная панель
+.navigation__panel-left {
+    display: flex;
+    width: 40px;
+    height: 100%;
+}
+
+.navigation__container-previos {
+    align-self: center;
+}
+
+.icon_previos {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    color: rgb(100, 100, 100);
+
+    &:hover {
+        color:rgb(50, 50, 50);
+    }
+}
+
+
+//Правая навигационная панель
+.navigation__panel-right {
+    display: flex;
+    width: 40px;
+    height: 100%;
+}
+
+.navigation__container-next {
+    transform: rotate(180deg);
+    align-self: center;
+}
+
+.navigation__container-close {
+    height: 16px;
+    transform: translateX(-16px);
+}
+
+.icon_next {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    color: rgb(100, 100, 100);
+
+    &:hover {
+        color:rgb(50, 50, 50);
+    }
+}
+
+.icon_close {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    color: rgb(250, 250, 250);
+
+    &:hover {
+        color:rgb(150, 150, 150);
+    }
+}
