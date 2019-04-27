@@ -1,0 +1,69 @@
+//Фотографии со слайдером
+.section_photos {
+    height: 250px;
+}
+
+.section__photo-gallery {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.section__column_photo-gallery {
+    display: flex;
+    width: 100%;
+}
+
+.photo-mint {
+    height: 250px;
+    //display: none;
+}
+
+.photo-mint_left {
+    width: 33.33%;
+    height: 100%;
+
+    @media only screen and (max-width: 899px) {
+        width: 50%;
+    }
+
+    @media only screen and (max-width: 649px) {
+        width: 100%;
+    }
+}
+
+.photo-mint_right {
+    width: 100%;
+    height: 100%;
+}
+
+.photo-mint_1 {
+    background: url(/assets/img/mint_1.png) no-repeat center;
+    background-size: cover;
+}
+
+.photo-mint_2 {
+    background: url(/assets/img/mint_2.png) no-repeat center;
+    background-size: cover;
+
+    @media only screen and (max-width: 649px) {
+        display: none;
+    }
+}
+
+.photo-mint_3 {
+    background: url(/assets/img/mint_3.png) no-repeat center;
+    background-size: cover;
+
+    @media only screen and (max-width: 899px) {
+        display: none;
+    }
+}
+
+.photo-mint_4 {
+    background: url(/assets/img/mint_4.png) no-repeat center;
+    background-size: cover;
+}

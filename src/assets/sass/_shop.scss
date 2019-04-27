@@ -1,0 +1,83 @@
+//Оформление заказа, общие стили
+.section__column_shop {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(230, 230, 230);
+}
+
+.shop {
+    width: 500px;
+    counter-reset: order__heading;
+}
+
+.shop__heading {
+    margin: 10px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.order__heading {
+    margin: 0px 30px;
+    font-size: 18px;
+}
+
+.order__heading:before {
+    counter-increment: order__heading;
+    content: counter(order__heading);
+    position: absolute;
+    left: 20px;
+    width: 24px;
+    height: 24px;
+    font-family: Arial;
+    line-height: 24px;
+    border-radius: 50%;
+    background-color: #2d3133;
+    color: #fff;
+    text-align: center;
+}
+
+.card {
+    position: relative;
+    margin: 2px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.field {
+    box-sizing: border-box;
+    width: 250px;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid rgb(150, 150, 150);
+    border-radius: 3px;
+
+    &:hover {
+        border-color: rgb(100, 100, 100);
+        background-color: rgb(220, 220, 220);
+    }
+    
+    &:focus {
+        outline: none;
+        border-color: rgb(50, 50, 50);
+    }
+}
+
+.button {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 2px;
+    border-color: transparent;
+    background-color: rgb(100, 100, 255);
+    font-size: 14px;
+    color: white;
+
+    &:hover {
+        background-color: rgb(50, 50, 255);
+    }
+}
+
+.separator {
+    margin: 20px 0px;
+}

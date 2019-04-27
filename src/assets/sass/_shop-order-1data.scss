@@ -1,0 +1,46 @@
+//1.Ваши данные
+.order__content_form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.user-form__label {
+    font-size: 14px;
+}
+
+.user-form__label {
+    display: block;
+}
+
+.user-form__login-control-text {
+    margin-top: 15px;
+    font-size: 12px;
+    color: gray;
+}
+
+.user-form__login-control {
+    display: flex;
+}
+
+.button_user-form {
+    width: 150px;
+    height: 30px;
+    margin: 10px 0px;
+    border-radius: 2px;
+}
+
+.user-form__link {
+    display: block;
+    box-sizing: border-box;
+    margin: 10px 20px;
+    padding: 5px;
+    height: 30px;
+    font-size: 14px;
+    color: rgb(50, 50, 255);
+    text-decoration: none;
+
+    &:hover {
+        color: rgb(255, 50, 50);
+    }
+}

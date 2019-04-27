@@ -1,0 +1,55 @@
+//Счет
+.shop__summary {
+    margin-top: 50px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+.summary__text {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.price {
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.summary__discont-price {
+    color: red;
+}
+
+.summary__delivery-st {
+    color: gray;
+}
+
+.summary__total-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.summary__total-price {
+    font-size: 20px;
+}
+
+.button_summary {
+    cursor: auto;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(150, 150, 150);
+
+    &:hover {
+        background-color: rgb(150, 150, 150);
+    }
+}
+
+.terms-and-conditions {
+    font-size: 14px;
+}

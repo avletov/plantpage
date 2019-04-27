@@ -25,27 +25,10 @@
 
 
 //Описание растения
+//Фото
 .container__photo-wrapper {
     width: 350px;
     height: 336px;
-}
-
-.container__card {
-    box-sizing: border-box;
-    width: 350px;
-    min-height: 336px;
-    padding: 20px;
-    background-color: salmon;
-    display: none;
-}
-
-.container__substances {
-    box-sizing: border-box;
-    width: 350px;
-    height: 336px;
-    padding: 20px;
-    background-color: greenyellow;
-    display: none;
 }
 
 .photo {
@@ -53,7 +36,57 @@
     width: 100%;
 }
 
-.container__content {
+//Карточка
+.container__describe-card {
+    box-sizing: border-box;
+    width: 350px;
+    min-height: 336px;
+    padding: 20px;
+    background-color: rgb(169, 209, 144);
+    display: none;
+}
+
+.describe-card__definition-list {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0px;
+    font-size: 14px;
+}
+
+.describe-card__term {
+    flex-basis: 45%;
+    margin-top: 5px;
+    font-weight: bold;
+    color: brown;
+}
+
+.describe-card__describe {
+    margin: 0px;
+    margin-top: 5px;
+    flex-basis: 55%;
+    flex-grow: 1;
+}
+
+//Вещества
+.container__substances {
+    box-sizing: border-box;
+    overflow: auto;
+    width: 350px;
+    height: 336px;
+    padding: 20px;
+    background-color: rgb(169, 209, 144);
+    display: none;
+}
+
+.substances__heading {
     margin: 0px;
     font-size: 16px;
+    text-align: center;
+}
+
+
+.substances__content {
+    margin: 3px;
+    font-size: 14px;
+    text-indent: 20px;
 }

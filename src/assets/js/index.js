@@ -1,3 +1,4 @@
+import {a} from "./form";
 //Описание растения
 const photoLink = document.getElementById('photo');
 const cardLink = document.getElementById('card');
@@ -76,4 +77,5 @@ function prevImage() {
     document.images["picture"].src = locations[currentImage];
     return false;
 }
+
 

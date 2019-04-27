@@ -1,0 +1,213 @@
+//2.Способ получения
+//2.1.Способ доставки
+.order__delivery-type {
+    margin: 0px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+//2.1.1.Доставка курьером
+.order__courier-delivery {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 10px;
+    border: 2px solid;
+    border-color: white;
+    border-radius: 5px;
+
+    &:hover {
+        box-shadow: 0 0 5px gray;
+    }
+}
+
+.order__delivery-price {
+    margin: 5px 0px;
+    font-size: 14px;
+    color: gray;
+}
+
+//Доставка курьером. Всплывающее окно: форма заполнения адреса.
+.courier-delivery-window {
+    position: fixed;
+    box-sizing: border-box;
+    width: 500px;
+    height: 450px;
+    padding: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 10px;
+    background-color: rgb(225, 225, 225);
+    display: none;
+}
+
+.courier-delivery-window__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.courier-delivery-window__title{
+    margin: 0px;
+    font-size: 16px;
+}
+
+.courier-delivery__label {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.courier-delivery-window__button-group {
+    margin-top: 10px;
+}
+
+.courier-delivery-window__button_OK {
+    width: 70px;
+    height: 30px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.courier-delivery-window__button_Cancel {
+    width: 70px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+//2.1.2.Доставка в пункт выдачи.
+.order__post-delivery {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.order__post-delivery-conditions {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(0, 0, 255);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.order__delivery-discount {
+    margin: 5px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(100, 200, 0);
+}
+
+.order__post-delivery-button {
+    width: 200px;
+    height: 30px;
+    margin: 10px 0px;
+}
+
+//Всплывающее окно. Выбор пункта выдачи.
+.post-delivery-select {
+    position: fixed;
+    box-sizing: border-box;
+    width: 500px;
+    height: 300px;
+    padding: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 10px;
+    background-color: rgb(225, 225, 225);
+    display: none;
+}
+
+.post-delivery-select__title {
+    margin: 0px;
+    font-size: 18px;
+}
+
+.post-delivery-select__text {
+    font-size: 16px;
+}
+
+.post-delivery-select__button_OK {
+    width: 70px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.post-delivery-select__button_Cancel {
+    width: 70px;
+    height: 30px;
+}
+
+
+//2.2.Отгрузка
+.order__shipment-title {
+    margin: 50px 0px 0px 0px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+}
+
+.product__describe {
+    display: block;
+    text-align: center;
+    margin: 5px;
+    font-size: 14px;
+    color: gray;
+}
+
+.product__photo-wrapper {
+    text-align: center;
+}
+
+.product__photo {
+    height: 100px;
+}
+
+.order__delivery-date {
+    font-size: 14px;
+}
+
+.order__delivery-method {
+    cursor: pointer;
+    font-size: 14px;
+    color: blue;
+}
+
+//Выбранная доставка
+.order__selected-delivery {
+    display: none;
+    justify-content: space-between;
+}
+
+.order__delivery-date {
+    display: flex;
+    flex-direction: column;
+}
+
+.order__delivery-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.order__delivery-text {
+    font-size: 14px;
+    color: grey;
+}
+
+.order__delivery-date-value {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.order__delivery-price-value {
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    color: green;
+    text-align: right;
+}

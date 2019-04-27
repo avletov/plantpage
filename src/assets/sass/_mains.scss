@@ -48,25 +48,6 @@
     background-color: rgb(200, 200, 200);
 }
 
-
-//Фотографии со слайдером
-.section_photos {
-    height: 250px;
-}
-
-.section__photo-gallery {
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow: hidden;
-}
-
-.photo-mint {
-    height: 250px;
-    //display: none;
-}
-
 //Подробное описание
 .article_detalied-describe {
     background-color: white;
@@ -75,5 +56,5 @@
 .right-background {
     width: 100%;
     height: 100%;
-    background-color: wheat;
+    background-color: rgb(169, 209, 144);
 }

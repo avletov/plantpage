@@ -1,0 +1,66 @@
+//3.Оплата
+.button_keyword-form {
+    width: 150px;
+    height: 40px;
+    margin: 10px 0px 0px 20px;
+}
+
+.activation-successful {
+    margin-top: 20px;
+    font-size: 14px;
+    color: green;
+    display: none;
+}
+
+.order__payment-methods {
+    font-size: 14px;
+}
+
+.payments__bankcard {
+    display: none;
+}
+
+.order__another-payments-button {
+    margin-top: 20px;
+    display: none;
+}
+
+.payments {
+    display: none;
+    flex-direction: column;
+}
+
+.payment {
+    cursor: pointer;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+
+    &:hover {
+        box-shadow: 0 0 5px gray;
+    }
+}
+
+.radio-input {
+    display: none;
+}
+
+.radio-input:checked + .payment {
+    border: 2px solid rgb(0, 0, 255);
+    box-shadow: none;
+}
+
+.payment__heading {
+    margin: 0px;
+    font-size: 16px;
+}
+
+.payment-free {
+    display: block;
+    margin: 5px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(100, 200, 0);
+}

@@ -1,0 +1,21 @@
+@mixin adaptive ($media) {
+    @if $media == extrasmallsmart {
+        @media only screen and (max-width: 349px) {@content}
+    }
+
+    @if $media == smart {
+        @media only screen and (max-width: 449px) {@content}
+    }
+ 
+    @else if $media == smalltablet {
+        @media only screen and (max-width: 799px) {@content}
+    }
+ 
+    @else if $media == tablet {
+        @media only screen and (max-width: 899px) {@content}
+    }
+ 
+    @else if $media == largetablet {
+        @media only screen and (max-width: 1024px) {@content}
+    }
+ }

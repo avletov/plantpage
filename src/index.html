@@ -45,11 +45,32 @@
                             <div class="container__photo-wrapper" id="photo-wrapper">
                                 <img class="photo" src="/assets/img/mentha.png">
                             </div>
-                            <div class="container__card" id="container-card">
-                                <p class="container__content">1</p>
+                            <div class="container__describe-card describe-card" id="container-card">
+                                <dl class="describe-card__definition-list">
+                                    <dt class="describe-card__term">Латинское название</dt>
+                                    <dd class="describe-card__describe">Mentha piperta 'Grapefruit Mint'</dd>
+                                    <dt class="describe-card__term">Высота</dt>
+                                    <dd class="describe-card__describe">До 30 см</dd>
+                                    <dt class="describe-card__term">Цвет</dt>
+                                    <dd class="describe-card__describe">Лиловый</dd>
+                                    <dt class="describe-card__term">Цветение</dt>
+                                    <dd class="describe-card__describe">Май - октябрь</dd>
+                                    <dt class="describe-card__term">Свет</dt>
+                                    <dd class="describe-card__describe">Светолюбива, но может расти и в тени.</dd>
+                                    <dt class="describe-card__term">Почва</dt>
+                                    <dd class="describe-card__describe">Требуется влажная хорошо дренированная почва</dd>
+                                    <dt class="describe-card__term">Полив</dt>
+                                    <dd class="describe-card__describe">Умеренный</dd>
+                                    <dt class="describe-card__term">Морозостойкость</dt>
+                                    <dd class="describe-card__describe">Высокая</dd>
+                                    <dt class="describe-card__term">Устойчивость к болезням</dt>
+                                    <dd class="describe-card__describe">Высокая</dd>
+                                </dl>
                             </div>
-                            <div class="container__substances" id="container-substanses">
-                                <p class="container__content">2</p>
+                            <div class="container__substances substances" id="container-substanses">
+                                <h3 class="substances__heading">Химический состав</h3>
+                                <p class="substances__content">В растениях содержатся эфирное масло (Масло мяты перечной) (2,4—2,75 % в листьях, в соцветиях 4—6 %), дубильные и смолистые вещества, каротин (0,007—0,0075 %, в листьях 0,0105—0,012), гесперидин, аскорбиновая (0,0095 %), хлорогеновая (0,7 %), кофейная (0,5—2 %), урсоловая (0,3 %) и олеаноловая (0,12 %) кислоты, рутин (0,014 %), бетаин, аргинин, нейтральные сапонины, глюкоза, рамноза, фитостерин. В семенах найдено жирное масло (20 %).</p>
+                                <p class="substances__content">Масло бесцветное, с желтоватым или зеленоватым оттенком, приятным освежающим вкусом и запахом. При отстаивании густеет и темнеет. Основной составной частью эфирного масла является вторичный спирт l-ментол (45—92 %). В масле листьев содержатся также эфиры ментола с уксусной и валериановой кислотами, α- и β-пинен, лимонен, дипентен, фелландрен, цинеол[3], цитраль, гераниол, карвон, дигидрокарвон.</p>
                             </div>
                         </div>
                     </div>
@@ -57,30 +78,34 @@
             </section>
             <section class="section section_photos">
                 <div class="section__photo-gallery" id="photoGallery">
-                    <img class="photo-mint" src="/assets/img/mint_1.png">
-                    <img class="photo-mint" src="/assets/img/mint_2.png">
-                    <img class="photo-mint" src="/assets/img/mint_3.png">
-                    <img class="photo-mint" src="/assets/img/mint_4.png">
+                    <div class="section__column section__column_left section__column_photo-gallery">
+                        <div class="photo-mint photo-mint_left photo-mint_1"></div>
+                        <div class="photo-mint photo-mint_left photo-mint_2"></div>
+                        <div class="photo-mint photo-mint_left photo-mint_3"></div>             
+                    </div>
+                    <div class="section__column section__column_right">
+                        <div class="photo-mint photo-mint_right photo-mint_4"></div>
+                    </div>
                     <div class="section__slider slider" id="photoSlider">
                         <div class="slider__navigation navigation">
                             <div class="navigation__panel-left">
-                                <div class="navigation__container-previos">
+                                <span class="navigation__container-previos">
                                     <svg class="navigation__icon icon icon_previos" id="back">
                                         <use xlink:href="assets/img/sprite.svg#slider__previos-icon"></use>
                                     </svg>
-                                </div>
+                                </span>
                             </div>
                             <div class="navigation__panel-right">
-                                <div class="navigation__container-next">
+                                <span class="navigation__container-next">
                                     <svg class="navigation__icon icon icon_next" id="next">
                                         <use xlink:href="assets/img/sprite.svg#slider__previos-icon"></use>
                                     </svg>
-                                </div>
-                                <div class="navigation__container-close">
+                                </span>
+                                <span class="navigation__container-close">
                                     <svg class="navigation__icon icon icon_close" id="close">
                                         <use xlink:href="assets/img/sprite.svg#slider__close-icon" id="close-n"></use>
                                     </svg>
-                                </div>
+                                </span>
                             </div>
                         </div>
                         <div class="slide">
@@ -95,6 +120,203 @@
                         <p class="article__content">Прекрасно подходит для холодного чая или салата. Одна из красивейших мят в саду и легко культивируется. Растения рода Мята существенно различаются по химическому составу образуемых при метаболизме летучих веществ - метаболитов, так называемых ЛАВ, что проявляется в разном запахе и разном составе эфирных масел. Название рода происходит от имени нимфы Минфы (или Минты), богини горы Менте в Элиде, возлюбленной бога подземного царства Гадеса. Супруга Гадеса Персефона превратила её в растение - душистую мяту.</p>
                         <p class="article__content">Прекрасно подходит для холодного чая или салата. Одна из красивейших мят в саду и легко культивируется. Растения рода Мята существенно различаются по химическому составу образуемых при метаболизме летучих веществ - метаболитов, так называемых ЛАВ, что проявляется в разном запахе и разном составе эфирных масел. Название рода происходит от имени нимфы Минфы (или Минты), богини горы Менте в Элиде, возлюбленной бога подземного царства Гадеса. Супруга Гадеса Персефона превратила её в растение - душистую мяту.</p>
                     </article>
+                </div>
+                <div class="section__column section__column_right">
+                    <div class="right-background"></div>
+                </div>
+            </section>
+            <section class="section section_shop">
+                <div class="section__column section__column_left section__column_shop">
+                    <div class="section__shop shop">
+                        <h2 class="shop__heading">Купить</h2>
+                        <div class="shop__order order">
+
+                            <!--1. ВАШИ ДАННЫЕ -->
+                            <div class="order__user-data card">
+                                <h3 class="order__heading">Ваши данные</h3>
+                                <div class="order__content order__content_form">
+                                    <form class="order__user-form user-form" id="userForm" action="" onsubmit="return false;">
+                                        <label class="user-form__label label" for="phoneField">Номер телефона</label>
+                                        <input class="phone-field field" id="phoneField"></input>
+                                        <div class="user-form__login-control-text">Вам будет отправлен код подтверждения</div>
+                                        <div class="user-form__login-control">
+                                            <button class="user-form__button button button_user-form" id="userFormButton">Получить код</button>
+                                            <a class="user-form__link" href="">Войти по почте</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!--2. СПОСОБ ПОЛУЧЕНИЯ -->
+                            <div class="order__delivery card">
+                                <h3 class="order__heading" id="methodDelivery">Способ получения</h3>
+                                <div class="order__content">
+                                    <!--2.1.1 Курьерская доставка -->
+                                    <div class="order__courier-delivery" id="courierDelivery">
+                                        <h4 class="order__delivery-type">Курьерская доставка или почта</h4>
+                                        <span class="order__delivery-price">От 150 рублей</span>
+                                    </div>
+                                    <!--2.1.2 Всплывающее окно. Курьерская доставка. Форма заполнения адреса. -->
+                                    <div class="order__courier-delivery-window courier-delivery-window" id="courierDeliveryWindow">
+                                        <form class="courier-delivery-window__form" id="courierDeliveryForm" action=""  onsubmit="return false;">
+                                            <h4 class="courier-delivery-window__title">Ваш адрес</h4>
+                                            <label class="courier-delivery__label label" for="placeField">Город</label>
+                                            <input class="place-field field" id="placeField"></input>
+                                            <label class="courier-delivery__label label" for="streetField">Улица</label>
+                                            <input class="street-field field" id="streetField"></input>
+                                            <label class="courier-delivery__label label" for="homeField">Дом</label>
+                                            <input class="home-field field" id="homeField"></input>
+                                            <label class="courier-delivery__label label" for="flatField">Квартира</label>
+                                            <input class="flat-field field" id="flatField"></input>
+                                            <div class ="courier-delivery-window__button-group">
+                                                <button class="courier-delivery-window__button_OK button" id="courierDeliveryButtonOk">OK</button>
+                                                <button class="courier-delivery-window__button_Cancel button" id="courierDeliveryButtonCancel">Oтмена</button>
+                                            </div>
+                                        </form> 
+                                    </div>
+                                    <div class="order__post-delivery">
+                                        <!--2.2.1 Почтоматы 24/7 и пункты выдачи -->
+                                        <div class="order__post-delivery-conditions" id="postDelivery">
+                                            <h4 class="order__delivery-type">Почтоматы 24/7 и пункты выдачи</h4>
+                                            <span class="order__delivery-discount">Скидка на доставку</span>     
+                                        </div>
+                                        <button class="order__post-delivery-button button button_post-delivery" id="postDeliveryButton">Выбрать место получения</button>
+                                        <!--2.2.2 Всплывающее окно. Выбор пункта выдачи. -->
+                                        <div class="order__post-delivery-select post-delivery-select" id="postDeliveryWindow">
+                                            <form id="selectPostDeliveryForm" action=""  onsubmit="return false;">
+                                                <h4 class="post-delivery-select__title">Выберите место получения</h4>
+                                                <p class="post-delivery-select__text" id="avtozavodskaya"><input name="place-get" type="radio" value="avtozavodskaya"> м. Автозаводская</p>
+                                                <p class="post-delivery-select__text" id="taganskaya"><input name="place-get" type="radio" value="taganskaya"> м. Таганская</p>
+                                                <p class="post-delivery-select__text" id="kurskaya"><input name="place-get" type="radio" value="kurskaya"> м. Курская</p>
+                                                <p class="post-delivery-select__text" id="lermontovskyProspect"><input name="place-get" type="radio" value="lermontovskyProspect"> м. Лермонтовский проспект</p>
+                                                <button class="post-delivery-select__button_OK button" id="postDeliveryButtonOk">OK</button>
+                                                <button class="post-delivery-select__button_Cancel button" id="postDeliveryButtonCancel">Oтмена</button>
+                                            </form> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order__content order__content_shipment">
+                                    <h4 class="order__shipment-title">Отправление 1</h4>
+                                    <div class="order__product product">
+                                        <span class="product__describe">1 товар • 100 г</span>
+                                        <div class="product__photo-wrapper">
+                                            <img class="product__photo" src="/assets/img/mentha.png">
+                                        </div>
+                                        <span class="product__describe">1 шт</span>
+                                    </div>
+                                    <hr class="separator">
+                                    <div class="order__choose-delivery" id="chooseDelivery">
+                                        <p class="order__delivery-date">Ближайшая дата доставки — завтра</p>
+                                        <a href="#methodDelivery" class="order__delivery-method">Выберите способ доставки</a>
+                                    </div>
+                                    <!--2.2.1 Дата и стоимость выбранной доставки -->
+                                    <div class="order__selected-delivery" id="selectedDelivery">
+                                        <div class="order__delivery-date">
+                                            <span class="order__delivery-text" id="selectedDeliveryText">Доставим</span>
+                                            <span class="order__delivery-date-value">завтра</span>
+                                        </div>
+                                        <div class="order__delivery-price">
+                                            <span class="order__delivery-text">Стоимость доставки</span>
+                                            <span class="order__delivery-price-value">0 ₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--3. ОПЛАТА -->
+                            <div class="order__payment card">
+                                <h3 class="order__heading">Оплата</h3>
+                                <div class="order__content">
+                                    <form class="order__keyword-form keyword-form" id="keywordForm" action="" onsubmit="return false;">
+                                        <input class="keyword-form__field field" type="text" name="keywordField" placeholder="Кодовое слово или сертификат"></input>
+                                        <button class="keyword-form__button button button_keyword-form" id="keywordFormButton">Активировать</button>
+                                    </form>
+                                    <!--3.1.Сообщение активации -->
+                                    <span class="activation-successful" id="activationSuccessful">Код успешно активирован</span>
+                                    <hr class="separator">
+                                    <div class="order__select-delivery" id="chooseDelivery2" >
+                                        <a class="order__delivery-method" href="#methodDelivery">Выберите способ доставки </a>
+                                        <span class="order__payment-methods">чтобы увидеть доступные варианты оплаты</span>
+                                    </div>
+                                    <!--3.2.Способы оплаты -->
+                                    <label for="bankcard">
+                                        <input name="payment-method" type="radio" class="radio-input"  id="bankcard" value="bankcard" checked><div class="payments__bankcard payment" id="cardPaymemt">
+                                            <h4 class="payment__heading">Онлайн банковской картой</h4>
+                                            <span class="payment-free">Бесплатно при оплате онлайн</span>         
+                                        </div>
+                                    </label>
+                                    <button class="order__another-payments-button button" id="anotherPaymentButton">Другие варианты оплаты</button>
+                                    <div class="order__other-payments payments" id="otherPayments">
+                                        <label for="sberbank">
+                                            <input name="payment-method" type="radio" class="radio-input" id="sberbank" value="sberbank"><div class="payments__sberbank payment">
+                                                <h4 class="payment__heading">СПАСИБО от Сбербанка</h4>
+                                                <span class="payment-free">Бесплатно при оплате онлайн</span>     
+                                            </div>
+                                        </label>
+                                        <label for="bankTransfer">
+                                            <input name="payment-method" type="radio" class="radio-input" id="bankTransfer" value="bankTransfer"><div class="payments__transfer payment">
+                                                <h4 class="payment__heading">Банковский перевод</h4>
+                                                <span class="payment-free">Бесплатно при оплате онлайн</span>     
+                                            </div>
+                                        </label>
+                                        <label for="yandexMoney">
+                                            <input name="payment-method" type="radio" class="radio-input" id="yandexMoney" value="yandexMoney"><div class="payments__yandex-money payment">
+                                                <h4 class="payment__heading">Яндекс.Деньги</h4>
+                                                <span class="payment-free">Бесплатно при оплате онлайн</span>     
+                                            </div>
+                                        </label>
+                                        <label for="webMoney">
+                                            <input name="payment-method" type="radio" class="radio-input" id="webMoney" value="webMoney"><div class="payments__web-money payment" id="webMoney">
+                                                <h4 class="payment__heading">Web.Money</h4>
+                                                <span class="payment-free">Бесплатно при оплате онлайн</span>     
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shop__summary summary">
+                            <div class="summary__card card">
+                                <div class="summary__products row">
+                                    <div class="summary__products-left">
+                                        <span class="summary__text">Товары</span>
+                                    </div>
+                                    <div class="summary__products-right">
+                                        <span class="summary__products-price price">300 ₽</span>
+                                    </div>
+                                </div>
+                                <div class="summary__discont row">
+                                    <div class="summary__discont-left">
+                                        <span class="summary__text">Скидка</span>
+                                    </div>
+                                    <div class="summary__discont-right">
+                                        <span class="summary__discont-price price">-100 ₽</span>
+                                    </div>
+                                </div>
+                                <div class="summary__delivery row">
+                                    <div class="summary__delivery-left">
+                                        <span class="summary__text">Доставка</span>
+                                    </div>
+                                    <div class="summary__delivery-right">
+                                        <span class="summary__delivery-st price">Не выбрана</span>
+                                    </div>
+                                </div>
+                                <hr class="separator">
+                                <div class="summary__total row">
+                                    <div class="summary__total-left">
+                                        <span class="summary__total-text">Итого</span>
+                                    </div>
+                                    <div class="summary__total-right">
+                                        <span class="summary__total-price price">200 ₽</span>
+                                    </div>
+                                </div>
+                                <button class="summary__button button button_summary" id="summaryButton">Подтвердить заказ</button>
+                            </div>
+                        </div>
+                        <div class="shop__terms-and-conditions">
+                            <p class="terms-and-conditions">Нажимая на кнопку, вы подтверждаете своё совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с <a href="">Условиями</a>, а также с <a href="">Условиями продажи</a></p>
+                        </div>
+                    </div>
                 </div>
                 <div class="section__column section__column_right">
                     <div class="right-background"></div>
