@@ -40,7 +40,13 @@
     transform: translateX(-50%) translateY(-50%);
     border-radius: 10px;
     background-color: rgb(225, 225, 225);
+    z-index: 2;
     display: none;
+
+    @media only screen and (max-width: 449px) {
+        height: 500px;
+        width: 100%;
+    }
 }
 
 .courier-delivery-window__form {
@@ -63,14 +69,14 @@
 }
 
 .courier-delivery-window__button_OK {
-    width: 70px;
+    width: 60px;
     height: 30px;
     margin-top: 10px;
     margin-right: 20px;
 }
 
 .courier-delivery-window__button_Cancel {
-    width: 70px;
+    width: 80px;
     height: 30px;
     margin-top: 10px;
 }
@@ -103,7 +109,7 @@
     margin: 10px 0px;
 }
 
-//Всплывающее окно. Выбор пункта выдачи.
+//Доставка в пункт выдачи. Всплывающее окно: выбор пункта выдачи.
 .post-delivery-select {
     position: fixed;
     box-sizing: border-box;
@@ -115,7 +121,13 @@
     transform: translateX(-50%) translateY(-50%);
     border-radius: 10px;
     background-color: rgb(225, 225, 225);
+    z-index: 2;
     display: none;
+
+    @media only screen and (max-width: 449px) {
+        height: 350px;
+        width: 100%;
+    }
 }
 
 .post-delivery-select__title {
@@ -128,13 +140,13 @@
 }
 
 .post-delivery-select__button_OK {
-    width: 70px;
+    width: 60px;
     height: 30px;
     margin-right: 20px;
 }
 
 .post-delivery-select__button_Cancel {
-    width: 70px;
+    width: 80px;
     height: 30px;
 }
 

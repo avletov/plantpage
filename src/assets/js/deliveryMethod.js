@@ -1,25 +1,7 @@
-export const a = 0;
+import {orderCheck, orderSend} from "./summary";
 
-//1.Ваши данные. Получение кода подтверждения
-const userFormButton = document.getElementById('userFormButton');
-const userForm = document.getElementById('userForm');
-
-userFormButton.addEventListener('click', userFormProcess);
-
-let phone;
-let code;
-
-function userFormProcess() {
-    const reg = /^\d[\d\(\)\ -]{4,14}\d$/;
-    if (reg.test(userForm.elements.phoneField.value)) {
-        phone = userForm.elements.phoneField.value;
-        code = Math.floor(Math.random()*1000000);
-        alert(`Ваш код подтверждения: ${code}`);
-    } else {
-        alert('Не корректный телефон'); 
-    }
-}
-
+export let address;
+export let postDeliveryPlace;
 
 //2.Способ получения
 const courierDelivery = document.getElementById('courierDelivery');
@@ -28,6 +10,9 @@ const postDeliveryButton = document.getElementById('postDeliveryButton');
 
 const chooseDelivery = document.getElementById('chooseDelivery');
 const chooseDelivery2 = document.getElementById('chooseDelivery2');
+const summaryDeliveryPrice = document.getElementById('summaryDeliveryPrice');
+const summaryTotalPrice = document.getElementById('summaryTotalPrice');
+
 //2.1.Курьерская доставка
 //Доставка курьером. Всплывающее окно с формой
 const courierDeliveryWindow = document.getElementById('courierDeliveryWindow');
@@ -46,7 +31,6 @@ courierDelivery.addEventListener('click', courierDeliveryWindowOpen);
 courierDeliveryButtonOk.addEventListener('click', courierDeliveryOk);
 courierDeliveryButtonCancel.addEventListener('click', courierDeliveryCancel);
 
-
 function courierDeliveryWindowOpen() {
     if (event.target.id == 'courierDeliveryButtonOk' || event.target.id == 'courierDeliveryButtonCancel') {
         return;
@@ -56,11 +40,7 @@ function courierDeliveryWindowOpen() {
     courierDeliveryWindow.style.display = "flex";
 }
 
-let address;
-
 function courierDeliveryOk(event) {
-    courierDeliveryWindow.style.display = "none";
-
     if (anotherPaymentButton.style.display == "none") {
         return;
     }
@@ -73,15 +53,19 @@ function courierDeliveryOk(event) {
             flat: flatField.value
         }
 
+        courierDeliveryWindow.style.display = "none";
         chooseDelivery.style.display = "none";
         chooseDelivery2.style.display = "none";
         postDeliveryButton.style.display = "none";
         postDelivery.style.cursor = "pointer";
-        postDelivery.addEventListener('click', postDeliveryWindowOpen);
         selectedDelivery.style.display = "flex";
         anotherPaymentButton.style.display = "flex";
         cardPaymemt.style.display = "flex";
+        summaryDeliveryPrice.innerHTML = "100 ₽";
+        summaryDeliveryPrice.style.color = "red";
+        summaryTotalPrice.innerHTML = "300 ₽"
 
+        postDelivery.addEventListener('click', postDeliveryWindowOpen);
         orderCheck();
     }
 }
@@ -92,17 +76,15 @@ function courierDeliveryCancel(event) {
 
 
 //2.2.Доставка в пункты выдачи.
-const postDeliveryWindow = document.getElementById('postDeliveryWindow');
-
-postDeliveryButton.addEventListener('click', postDeliveryWindowOpen);
-
 //Доставка в пункты выдачи. Элементы формы.
+const postDeliveryWindow = document.getElementById('postDeliveryWindow');
 const postDeliveryButtonOk = document.getElementById('postDeliveryButtonOk');
 const postDeliveryButtonCancel = document.getElementById('postDeliveryButtonCancel');
+//
 
+postDeliveryButton.addEventListener('click', postDeliveryWindowOpen);
 postDeliveryButtonOk.addEventListener('click', postDeliveryOk);
 postDeliveryButtonCancel.addEventListener('click', postDeliveryCancel);
-
 
 function postDeliveryWindowOpen() {
     if (event.target.id == 'selectPostDeliveryOk' || event.target.id == 'selectPostDeliveryCancel') {
@@ -112,8 +94,6 @@ function postDeliveryWindowOpen() {
     postDelivery.style.border = "2px solid blue";
     courierDelivery.style.border = "none";
 }
-
-let postDeliveryPlace;
 
 function postDeliveryOk(event) {
     function isCheck(name) {
@@ -126,6 +106,8 @@ function postDeliveryOk(event) {
     chooseDelivery2.style.display = "none";
     selectedDelivery.style.display = "flex";
     cardPaymemt.style.display = "flex";
+    summaryDeliveryPrice.innerHTML = "Бесплатно";
+    summaryDeliveryPrice.style.color = "green";
 
     if (anotherPaymentButton.style.display == "none") {
         return;
@@ -136,69 +118,3 @@ function postDeliveryOk(event) {
 function postDeliveryCancel(event) {
     postDeliveryWindow.style.display = "none";
 }
-
-
-//3.Оплата
-//Активация
-const keywordForm = document.getElementById('keywordForm');
-const keywordFormButton = document.getElementById('keywordFormButton');
-const activationSuccessful = document.getElementById('activationSuccessful');
-
-keywordFormButton.addEventListener('click', keywordControll);
-
-let keyword = false;
-
-function keywordControll() {
-    if (keywordForm.elements.keywordField.value == code) {
-        keywordForm.style.display = "none";
-        activationSuccessful.style.display = "flex";
-        keyword = true;
-        orderCheck();
-        return;
-    } 
-    alert('упс!');
-}
-
-
-anotherPaymentButton.addEventListener('click', anotherPaymentsOpen);
-
-function anotherPaymentsOpen() {
-    otherPayments.style.display = "flex";
-    anotherPaymentButton.style.display = "none";
-}
-
-
-
-//Подтверждение заказа
-const summaryButton = document.getElementById('summaryButton');
-let paymentMethod = 'bank-card';
-
-function orderCheck() {
-    if (keyword && (address != undefined || postDeliveryPlace != undefined)) {
-        summaryButton.style.cursor = "pointer";
-        summaryButton.style.backgroundColor = "green";
-        summaryButton.addEventListener('click', orderSend);
-    }
-}
-
-function orderSend() {
-    function isCheck(name) {
-        return document.querySelector('input[name="' + name + '"]:checked');
-    }
-    paymentMethod = isCheck('payment-method').value;
-
-    const orderData = {
-        "phone": phone,
-        "address": address,
-        "postDeliveryPlace": postDeliveryPlace,
-        "paymentMethod": paymentMethod
-    }
-    console.log(orderData);
-}
-
-
-
-
-
-
-

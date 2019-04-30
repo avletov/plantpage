@@ -1,12 +1,19 @@
 .header {
+    position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 70px;
     background-color: rgb(25, 25, 25);
 }
 
 .header__menu {
-    margin: 0px 50px;  
+    margin: 0px 5%;
+
+    @media only screen and (max-width: 649px) {
+        margin-top: 70px;
+        width: 100%;
+    } 
 }
 
 .menu__list {
@@ -16,6 +23,14 @@
     height: 100%;
     padding: 0px;
     list-style-type: none;
+}
+
+.menu__list_main {
+    @media only screen and (max-width: 649px) {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
 .menu__link {
@@ -29,12 +44,47 @@
     &:hover {
         color: rgb(180, 180, 180);
     }
+
+    
+    @media only screen and (max-width: 649px) {
+        width: 100%;
+        text-align: center;
+    } 
+}
+
+.header__button-menu {
+    margin: 0px 5%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    outline: none;
+    display: none;
+
+    @media only screen and (max-width: 649px) {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        display: block;
+    }
+}
+
+.header__button-svg {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin: 0px;
 }
 
 .header__logo {
     display: flex;
     align-items: center;
-    margin-right: 100px;
+    margin-right: 10%;
+    @media only screen and (max-width: 649px) {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
 }
 
 .logo {

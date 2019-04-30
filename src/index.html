@@ -10,16 +10,21 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="header">
-            <nav class="header__menu menu menu_main">
-                <ul class="menu__list">
+        <header class="header" id="header">
+            <button class="header__button-menu" id="menuButton">
+                <svg class="header__button-svg">
+                    <use xlink:href="assets/img/sprite.svg#menuIcon"></use>
+                </svg>
+            </button>
+            <nav class="header__menu menu menu_main" id="mainMenu">
+                <ul class="menu__list menu__list_main" id="menuList">
                     <li class="menu__item"><a class="menu__link" href="">Главная</a></li>
                     <li class="menu__item"><a class="menu__link" href="">Растения</a></li>
                     <li class="menu__item"><a class="menu__link" href="">Статьи</a></li>
                     <li class="menu__item"><a class="menu__link" href="">О нас</a></li>
                 </ul>
             </nav>
-            <div class="header__logo">
+            <div class="header__logo" id="headerLogo">
                 <span class="logo">pb</span>
             </div>
         </header>
@@ -32,10 +37,11 @@
                         <p class="article__content">Прекрасно подходит для холодного чая или салата. Одна из красивейших мят в саду и легко культивируется. Растения рода Мята существенно различаются по химическому составу образуемых при метаболизме летучих веществ - метаболитов, так называемых ЛАВ, что проявляется в разном запахе и разном составе эфирных масел. Название рода происходит от имени нимфы Минфы (или Минты), богини горы Менте в Элиде, возлюбленной бога подземного царства Гадеса. Супруга Гадеса Персефона превратила её в растение - душистую мяту.</p>
                     </article>
                 </div>
-                <div class="section__column section__column_right">
+                <!-- Описание растения справа -->
+                <div class="section__column section__column_right section__column_describe">
                     <div class="section__container container container_describe">
                         <nav class="container__menu menu menu_describe">
-                            <ul class="menu__list">
+                            <ul class="menu__list menu__list_describe">
                                 <li class="menu__item menu__item_describe"><a class="menu__link menu__link_describe menu__link_photo" id="photo">Фото</a></li>
                                 <li class="menu__item menu__item_describe"><a class="menu__link menu__link_describe menu__link_card" id="card">Карточка</a></li>
                                 <li class="menu__item menu__item_describe"><a class="menu__link menu__link_describe menu__link_substances" id="substances">Вещества</a></li>
@@ -77,40 +83,42 @@
                 </div>
             </section>
             <section class="section section_photos">
+                <!-- Галерея -->
                 <div class="section__photo-gallery" id="photoGallery">
                     <div class="section__column section__column_left section__column_photo-gallery">
                         <div class="photo-mint photo-mint_left photo-mint_1"></div>
                         <div class="photo-mint photo-mint_left photo-mint_2"></div>
                         <div class="photo-mint photo-mint_left photo-mint_3"></div>             
                     </div>
-                    <div class="section__column section__column_right">
+                    <div class="section__column section__column_right section__column_photo-gallery-right">
                         <div class="photo-mint photo-mint_right photo-mint_4"></div>
                     </div>
-                    <div class="section__slider slider" id="photoSlider">
-                        <div class="slider__navigation navigation">
-                            <div class="navigation__panel-left">
-                                <span class="navigation__container-previos">
-                                    <svg class="navigation__icon icon icon_previos" id="back">
-                                        <use xlink:href="assets/img/sprite.svg#slider__previos-icon"></use>
-                                    </svg>
-                                </span>
-                            </div>
-                            <div class="navigation__panel-right">
-                                <span class="navigation__container-next">
-                                    <svg class="navigation__icon icon icon_next" id="next">
-                                        <use xlink:href="assets/img/sprite.svg#slider__previos-icon"></use>
-                                    </svg>
-                                </span>
-                                <span class="navigation__container-close">
-                                    <svg class="navigation__icon icon icon_close" id="close">
-                                        <use xlink:href="assets/img/sprite.svg#slider__close-icon" id="close-n"></use>
-                                    </svg>
-                                </span>
-                            </div>
+                </div>
+                <!-- Слайдер -->
+                <div class="section__slider slider" id="photoSlider">
+                    <div class="slider__navigation navigation">
+                        <div class="navigation__panel-left">
+                            <span class="navigation__container-previos">
+                                <svg class="navigation__icon icon icon_previos" id="back">
+                                    <use xlink:href="assets/img/sprite.svg#slider__previos-icon"></use>
+                                </svg>
+                            </span>
                         </div>
-                        <div class="slide">
-                            <img class="slide-photo" src="/assets/img/mint_1.png" name="picture">
+                        <div class="navigation__panel-right">
+                            <span class="navigation__container-next">
+                                <svg class="navigation__icon icon icon_next" id="next">
+                                    <use xlink:href="assets/img/sprite.svg#slider__previos-icon"></use>
+                                </svg>
+                            </span>
+                            <span class="navigation__container-close">
+                                <svg class="navigation__icon icon icon_close" id="close">
+                                    <use xlink:href="assets/img/sprite.svg#slider__close-icon" id="close-n"></use>
+                                </svg>
+                            </span>
                         </div>
+                    </div>
+                    <div class="slide">
+                        <img class="slide-photo" src="/assets/img/mint_1.png" name="picture">
                     </div>
                 </div>
             </section>
@@ -125,6 +133,8 @@
                     <div class="right-background"></div>
                 </div>
             </section>
+
+            <!-- МАГАЗИН -->
             <section class="section section_shop">
                 <div class="section__column section__column_left section__column_shop">
                     <div class="section__shop shop">
@@ -196,6 +206,7 @@
                                     </div>
                                 </div>
                                 <div class="order__content order__content_shipment">
+                                    <!--2.3.1 Отгружаемый товар с фото -->
                                     <h4 class="order__shipment-title">Отправление 1</h4>
                                     <div class="order__product product">
                                         <span class="product__describe">1 товар • 100 г</span>
@@ -205,11 +216,11 @@
                                         <span class="product__describe">1 шт</span>
                                     </div>
                                     <hr class="separator">
+                                    <!--2.3.2 Дата и стоимость выбранной доставки -->
                                     <div class="order__choose-delivery" id="chooseDelivery">
                                         <p class="order__delivery-date">Ближайшая дата доставки — завтра</p>
                                         <a href="#methodDelivery" class="order__delivery-method">Выберите способ доставки</a>
                                     </div>
-                                    <!--2.2.1 Дата и стоимость выбранной доставки -->
                                     <div class="order__selected-delivery" id="selectedDelivery">
                                         <div class="order__delivery-date">
                                             <span class="order__delivery-text" id="selectedDeliveryText">Доставим</span>
@@ -240,41 +251,69 @@
                                     </div>
                                     <!--3.2.Способы оплаты -->
                                     <label for="bankcard">
-                                        <input name="payment-method" type="radio" class="radio-input"  id="bankcard" value="bankcard" checked><div class="payments__bankcard payment" id="cardPaymemt">
-                                            <h4 class="payment__heading">Онлайн банковской картой</h4>
-                                            <span class="payment-free">Бесплатно при оплате онлайн</span>         
+                                        <input name="payment-method" type="radio" class="radio-input"  id="bankcard" value="bankcard" checked>
+                                        <div class="payments__bankcard payment" id="cardPaymemt" style="display: none">
+                                            <div class="payment__content">
+                                                <h4 class="payment__heading">Онлайн банковской картой</h4>
+                                                <span class="payment-free">Бесплатно при оплате онлайн</span>
+                                            </div>
+                                            <div class="payment__logo-wrapper">
+                                                <img class="payment__logo" src="/assets/img/logo-bank-card.png">
+                                            </div>
                                         </div>
                                     </label>
                                     <button class="order__another-payments-button button" id="anotherPaymentButton">Другие варианты оплаты</button>
                                     <div class="order__other-payments payments" id="otherPayments">
                                         <label for="sberbank">
                                             <input name="payment-method" type="radio" class="radio-input" id="sberbank" value="sberbank"><div class="payments__sberbank payment">
-                                                <h4 class="payment__heading">СПАСИБО от Сбербанка</h4>
-                                                <span class="payment-free">Бесплатно при оплате онлайн</span>     
+                                                <div class="payment__content">
+                                                    <h4 class="payment__heading">СПАСИБО от Сбербанка</h4>
+                                                    <span class="payment-free">Бесплатно при оплате онлайн</span>
+                                                </div>
+                                                <div class="payment__logo-wrapper">
+                                                    <img class="payment__logo" src="/assets/img/logo-spasibo-ot-sberbanka.png">
+                                                </div> 
                                             </div>
                                         </label>
                                         <label for="bankTransfer">
                                             <input name="payment-method" type="radio" class="radio-input" id="bankTransfer" value="bankTransfer"><div class="payments__transfer payment">
-                                                <h4 class="payment__heading">Банковский перевод</h4>
-                                                <span class="payment-free">Бесплатно при оплате онлайн</span>     
+                                                <div class="payment__content">
+                                                    <h4 class="payment__heading">Банковский перевод</h4>
+                                                    <span class="payment-free">Бесплатно при оплате онлайн</span>
+                                                </div>
+                                                <div class="payment__logo-wrapper">
+                                                    <img class="payment__logo" src="/assets/img/logo-bank-transaction.png">
+                                                </div>    
                                             </div>
                                         </label>
                                         <label for="yandexMoney">
                                             <input name="payment-method" type="radio" class="radio-input" id="yandexMoney" value="yandexMoney"><div class="payments__yandex-money payment">
-                                                <h4 class="payment__heading">Яндекс.Деньги</h4>
-                                                <span class="payment-free">Бесплатно при оплате онлайн</span>     
+                                                <div class="payment__content">
+                                                    <h4 class="payment__heading">Яндекс.Деньги</h4>
+                                                    <span class="payment-free">Бесплатно при оплате онлайн</span>
+                                                </div>
+                                                <div class="payment__logo-wrapper">
+                                                    <img class="payment__logo" src="/assets/img/logo-yandex-money.png">
+                                                </div>     
                                             </div>
                                         </label>
                                         <label for="webMoney">
                                             <input name="payment-method" type="radio" class="radio-input" id="webMoney" value="webMoney"><div class="payments__web-money payment" id="webMoney">
-                                                <h4 class="payment__heading">Web.Money</h4>
-                                                <span class="payment-free">Бесплатно при оплате онлайн</span>     
+                                                <div class="payment__content">
+                                                    <h4 class="payment__heading">Web.Money</h4>
+                                                    <span class="payment-free">Бесплатно при оплате онлайн</span>
+                                                </div>
+                                                <div class="payment__logo-wrapper">
+                                                    <img class="payment__logo" src="/assets/img/logo-web-money.png">
+                                                </div>
                                             </div>
                                         </label>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!--ИТОГО. Подтверждение заказа -->
                         <div class="shop__summary summary">
                             <div class="summary__card card">
                                 <div class="summary__products row">
@@ -298,7 +337,7 @@
                                         <span class="summary__text">Доставка</span>
                                     </div>
                                     <div class="summary__delivery-right">
-                                        <span class="summary__delivery-st price">Не выбрана</span>
+                                        <span class="summary__delivery-st price" id="summaryDeliveryPrice">Не выбрана</span>
                                     </div>
                                 </div>
                                 <hr class="separator">
@@ -307,7 +346,7 @@
                                         <span class="summary__total-text">Итого</span>
                                     </div>
                                     <div class="summary__total-right">
-                                        <span class="summary__total-price price">200 ₽</span>
+                                        <span class="summary__total-price price" id="summaryTotalPrice">200 ₽</span>
                                     </div>
                                 </div>
                                 <button class="summary__button button button_summary" id="summaryButton">Подтвердить заказ</button>

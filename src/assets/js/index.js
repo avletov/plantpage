@@ -1,4 +1,31 @@
-import {a} from "./form";
+import {d} from "./summary";
+
+//Меню
+const header = document.getElementById('header');
+const menuButton = document.getElementById('menuButton');
+const headerLogo = document.getElementById('headerLogo');
+const menuList = document.getElementById('menuList');
+
+menuButton.addEventListener('click', menuOpen);
+
+function menuOpen() {
+    header.style.height = 'auto';
+    menuList.style.display = "flex";
+    menuButton.removeEventListener('click', menuOpen);
+    menuButton.addEventListener('click', menuClose);
+}
+
+function menuClose() {
+    header.style.height = '70px';
+    menuList.style.display = "none";
+    menuButton.removeEventListener('click', menuClose);
+    menuButton.addEventListener('click', menuOpen);
+}
+
+
+
+
+
 //Описание растения
 const photoLink = document.getElementById('photo');
 const cardLink = document.getElementById('card');
