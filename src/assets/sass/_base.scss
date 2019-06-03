@@ -34,9 +34,9 @@ body {
 
 .article {
     box-sizing: border-box;
+    height: 100%;
     margin: 0px;
     padding: 30px;
-    height: 100%;
 }
 
 .article__content {
@@ -59,7 +59,12 @@ body {
 }
 
 .article_describe {
+    height: 366px;
+    overflow: auto;
     background-color: rgb(200, 200, 200);
+    @media only screen and (max-width: 649px) {
+        height: auto;
+    }
 }
 
 //Подробное описание

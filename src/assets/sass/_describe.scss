@@ -2,8 +2,8 @@
     height: 366px;
 
     @media only screen and (max-width: 899px) {
-        height: auto;
         display: block !important;
+        height: auto;
     } 
 
     @media only screen and (max-width: 649px) {
@@ -45,9 +45,6 @@
 
 //Фото
 .container__photo-wrapper {
-    width: 350px;
-    min-height: 336px;
-
     @media only screen and (max-width: 849px) {
         width: 100%;
     }
@@ -62,15 +59,9 @@
 .container__describe-card {
     box-sizing: border-box;
     width: 350px;
-    height: 100%;
-    min-height: 336px;
     padding: 20px;
     background-color: rgb(169, 209, 144);
     display: none;
-
-    @media only screen and (max-width: 849px) {
-        height: 100%;
-    }
 }
 
 .describe-card__definition-list {
@@ -104,7 +95,7 @@
     background-color: rgb(169, 209, 144);
     display: none;
 
-    @media only screen and (max-width: 849px) {
+    @media only screen and (max-width: 649px) {
         height: auto;
         width: 100%;
     }

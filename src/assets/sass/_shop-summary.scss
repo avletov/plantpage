@@ -5,8 +5,8 @@
 
 .row {
     display: flex;
-    justify-content: space-between;
     margin: 10px 0px;
+    justify-content: space-between;
 }
 
 .summary__text {
@@ -52,4 +52,5 @@
 
 .terms-and-conditions {
     font-size: 14px;
+    padding: 0px 5px;
 }

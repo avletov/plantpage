@@ -10,6 +10,7 @@ const postDeliveryButton = document.getElementById('postDeliveryButton');
 
 const chooseDelivery = document.getElementById('chooseDelivery');
 const chooseDelivery2 = document.getElementById('chooseDelivery2');
+const deliveryPrice = document.getElementById('deliveryPrice');
 const summaryDeliveryPrice = document.getElementById('summaryDeliveryPrice');
 const summaryTotalPrice = document.getElementById('summaryTotalPrice');
 
@@ -36,7 +37,7 @@ function courierDeliveryWindowOpen() {
         return;
     }
     courierDelivery.style.border = "2px solid blue";
-    postDelivery.style.border = "none";
+    postDelivery.style.borderColor = "white";
     courierDeliveryWindow.style.display = "flex";
 }
 
@@ -61,6 +62,7 @@ function courierDeliveryOk(event) {
         selectedDelivery.style.display = "flex";
         anotherPaymentButton.style.display = "flex";
         cardPaymemt.style.display = "flex";
+        deliveryPrice.innerHTML = "100 ₽";
         summaryDeliveryPrice.innerHTML = "100 ₽";
         summaryDeliveryPrice.style.color = "red";
         summaryTotalPrice.innerHTML = "300 ₽"
@@ -92,7 +94,7 @@ function postDeliveryWindowOpen() {
     }
     postDeliveryWindow.style.display = "flex";
     postDelivery.style.border = "2px solid blue";
-    courierDelivery.style.border = "none";
+    courierDelivery.style.borderColor = "white";
 }
 
 function postDeliveryOk(event) {
@@ -106,6 +108,7 @@ function postDeliveryOk(event) {
     chooseDelivery2.style.display = "none";
     selectedDelivery.style.display = "flex";
     cardPaymemt.style.display = "flex";
+    deliveryPrice.innerHTML = "0 ₽";
     summaryDeliveryPrice.innerHTML = "Бесплатно";
     summaryDeliveryPrice.style.color = "green";
 

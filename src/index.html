@@ -49,7 +49,7 @@
                         </nav>
                         <div class="container__data">
                             <div class="container__photo-wrapper" id="photo-wrapper">
-                                <img class="photo" src="/assets/img/mentha.png">
+                                <img class="photo" src="assets/img/mentha.png">
                             </div>
                             <div class="container__describe-card describe-card" id="container-card">
                                 <dl class="describe-card__definition-list">
@@ -95,30 +95,32 @@
                     </div>
                 </div>
                 <!-- Слайдер -->
-                <div class="section__slider slider" id="photoSlider">
-                    <div class="slider__navigation navigation">
-                        <div class="navigation__panel-left">
-                            <span class="navigation__container-previos">
-                                <svg class="navigation__icon icon icon_previos" id="back">
-                                    <use xlink:href="assets/img/sprite.svg#slider__previos-icon"></use>
-                                </svg>
-                            </span>
+                <div class="section__modal-wrapper" id="photoSlider">
+                    <div class="section__slider slider">
+                        <div class="slider__navigation navigation">
+                            <div class="navigation__panel-left">
+                                <span class="navigation__container-previos">
+                                    <svg class="navigation__icon icon icon_previos" id="back">
+                                        <use xlink:href="assets/img/sprite.svg#slider__previos-icon"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="navigation__panel-right">
+                                <span class="navigation__container-next">
+                                    <svg class="navigation__icon icon icon_next" id="next">
+                                        <use xlink:href="assets/img/sprite.svg#slider__previos-icon"></use>
+                                    </svg>
+                                </span>
+                                <span class="navigation__container-close">
+                                    <svg class="navigation__icon icon icon_close" id="close">
+                                        <use xlink:href="assets/img/sprite.svg#slider__close-icon" id="close-n"></use>
+                                    </svg>
+                                </span>
+                            </div>
                         </div>
-                        <div class="navigation__panel-right">
-                            <span class="navigation__container-next">
-                                <svg class="navigation__icon icon icon_next" id="next">
-                                    <use xlink:href="assets/img/sprite.svg#slider__previos-icon"></use>
-                                </svg>
-                            </span>
-                            <span class="navigation__container-close">
-                                <svg class="navigation__icon icon icon_close" id="close">
-                                    <use xlink:href="assets/img/sprite.svg#slider__close-icon" id="close-n"></use>
-                                </svg>
-                            </span>
+                        <div class="slide">
+                            <img class="slide-photo" src="assets/img/mint_1.png" name="picture">
                         </div>
-                    </div>
-                    <div class="slide">
-                        <img class="slide-photo" src="/assets/img/mint_1.png" name="picture">
                     </div>
                 </div>
             </section>
@@ -164,7 +166,7 @@
                                     <!--2.1.1 Курьерская доставка -->
                                     <div class="order__courier-delivery" id="courierDelivery">
                                         <h4 class="order__delivery-type">Курьерская доставка или почта</h4>
-                                        <span class="order__delivery-price">От 150 рублей</span>
+                                        <span class="order__delivery-price">От 100 рублей</span>
                                     </div>
                                     <!--2.1.2 Всплывающее окно. Курьерская доставка. Форма заполнения адреса. -->
                                     <div class="order__courier-delivery-window courier-delivery-window" id="courierDeliveryWindow">
@@ -195,10 +197,16 @@
                                         <div class="order__post-delivery-select post-delivery-select" id="postDeliveryWindow">
                                             <form id="selectPostDeliveryForm" action=""  onsubmit="return false;">
                                                 <h4 class="post-delivery-select__title">Выберите место получения</h4>
-                                                <p class="post-delivery-select__text" id="avtozavodskaya"><input name="place-get" type="radio" value="avtozavodskaya"> м. Автозаводская</p>
-                                                <p class="post-delivery-select__text" id="taganskaya"><input name="place-get" type="radio" value="taganskaya"> м. Таганская</p>
-                                                <p class="post-delivery-select__text" id="kurskaya"><input name="place-get" type="radio" value="kurskaya"> м. Курская</p>
-                                                <p class="post-delivery-select__text" id="lermontovskyProspect"><input name="place-get" type="radio" value="lermontovskyProspect"> м. Лермонтовский проспект</p>
+                                                <input class="post-delivery-select__input" name="place-get" type="radio" value="avtozavodskaya" id="avtozavodskaya">
+                                                <label class="post-delivery-select__label" for="avtozavodskaya"> м. Автозаводская</label><br>
+                                                <input class="post-delivery-select__input" name="place-get" type="radio" value="kurskaya" id="kurskaya">
+                                                <label class="post-delivery-select__label" for="kurskaya"> м. Курская</label><br>
+                                                <input class="post-delivery-select__input" name="place-get" type="radio" value="lermontovskyProspect" id="lermontovskyProspect">
+                                                <label class="post-delivery-select__label" for="lermontovskyProspect"> м. Лермонтовский проспект</label><br>
+                                                <input class="post-delivery-select__input" name="place-get" type="radio" value="planernaya" id="planernaya">
+                                                <label class="post-delivery-select__label" for="planernaya"> м. Планерная</label><br>
+                                                <input class="post-delivery-select__input" name="place-get" type="radio" value="taganskaya" id="taganskaya">
+                                                <label class="post-delivery-select__label" for="taganskaya"> м. Таганская</label><br>
                                                 <button class="post-delivery-select__button_OK button" id="postDeliveryButtonOk">OK</button>
                                                 <button class="post-delivery-select__button_Cancel button" id="postDeliveryButtonCancel">Oтмена</button>
                                             </form> 
@@ -211,7 +219,7 @@
                                     <div class="order__product product">
                                         <span class="product__describe">1 товар • 100 г</span>
                                         <div class="product__photo-wrapper">
-                                            <img class="product__photo" src="/assets/img/mentha.png">
+                                            <img class="product__photo" src="assets/img/mentha.png">
                                         </div>
                                         <span class="product__describe">1 шт</span>
                                     </div>
@@ -228,7 +236,7 @@
                                         </div>
                                         <div class="order__delivery-price">
                                             <span class="order__delivery-text">Стоимость доставки</span>
-                                            <span class="order__delivery-price-value">0 ₽</span>
+                                            <span class="order__delivery-price-value" id="deliveryPrice">0 ₽</span>
                                         </div>
                                     </div>
                                 </div>
@@ -258,7 +266,7 @@
                                                 <span class="payment-free">Бесплатно при оплате онлайн</span>
                                             </div>
                                             <div class="payment__logo-wrapper">
-                                                <img class="payment__logo" src="/assets/img/logo-bank-card.png">
+                                                <img class="payment__logo" src="assets/img/logo-bank-card.png">
                                             </div>
                                         </div>
                                     </label>
@@ -271,7 +279,7 @@
                                                     <span class="payment-free">Бесплатно при оплате онлайн</span>
                                                 </div>
                                                 <div class="payment__logo-wrapper">
-                                                    <img class="payment__logo" src="/assets/img/logo-spasibo-ot-sberbanka.png">
+                                                    <img class="payment__logo" src="assets/img/logo-spasibo-ot-sberbanka.png">
                                                 </div> 
                                             </div>
                                         </label>
@@ -282,7 +290,7 @@
                                                     <span class="payment-free">Бесплатно при оплате онлайн</span>
                                                 </div>
                                                 <div class="payment__logo-wrapper">
-                                                    <img class="payment__logo" src="/assets/img/logo-bank-transaction.png">
+                                                    <img class="payment__logo" src="assets/img/logo-bank-transaction.png">
                                                 </div>    
                                             </div>
                                         </label>
@@ -293,7 +301,7 @@
                                                     <span class="payment-free">Бесплатно при оплате онлайн</span>
                                                 </div>
                                                 <div class="payment__logo-wrapper">
-                                                    <img class="payment__logo" src="/assets/img/logo-yandex-money.png">
+                                                    <img class="payment__logo" src="assets/img/logo-yandex-money.png">
                                                 </div>     
                                             </div>
                                         </label>
@@ -304,7 +312,7 @@
                                                     <span class="payment-free">Бесплатно при оплате онлайн</span>
                                                 </div>
                                                 <div class="payment__logo-wrapper">
-                                                    <img class="payment__logo" src="/assets/img/logo-web-money.png">
+                                                    <img class="payment__logo" src="assets/img/logo-web-money.png">
                                                 </div>
                                             </div>
                                         </label>
@@ -367,6 +375,6 @@
             <div class="footer__column footer__column_right"></div>
         </footer>
     </div>
-    <script src="/assets/js/index.min.js"></script>
+    <script  type="text/javascript" src="assets/js/index.min.js"></script>
 </body>
 </html>
